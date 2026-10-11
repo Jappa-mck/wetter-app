@@ -31,7 +31,7 @@ Das Projekt entsteht als Lernprojekt und wird laufend erweitert.
 
 ## Datenquelle
 
-Wetterdaten von [Open-Meteo.com](https://open-meteo.com/) (Lizenz: CC BY 4.0).
+Wetterdaten von [Open-Meteo.com](https://open-meteo.com/).
 
 ## Lizenz
 
