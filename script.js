@@ -15,16 +15,21 @@ weatherForm.addEventListener('submit', async (event) => {
 
     const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=de`);
     const data = await response.json();
-    const place = data.results[0];
+    
 
     if (!data.results) {
         weatherResult.textContent = 'Keine Ergebnisse gefunden.';
         return;
     } 
 
-    weatherResult.textContent = `Du suchst nach dem Wetter in ${place.name}, ${place.country}.`;
+    const place = data.results[0];
+    const weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m`);
+    const weatherData = await weatherResponse.json();
 
-    
+    console.log(weatherData);
+
+    weatherResult.textContent = `In ${place.name} sind es aktuelle ${weatherData.current.temperature_2m} °C.`;
+
 });
 
 weatherResult.textContent = `Bitte gib einen Stadtnamen ein, um das Wetter anzuzeigen.`;
