@@ -2,6 +2,10 @@ const weatherForm = document.getElementById('weather-form');
 const cityInput = document.getElementById('city-input');
 const weatherResult = document.getElementById('weather-result');
 
+const lastCity = localStorage.getItem('lastCity');
+if (lastCity) {
+    cityInput.value = lastCity;
+} 
 
 weatherForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -30,7 +34,7 @@ weatherForm.addEventListener('submit', async (event) => {
         }
 
         const place = data.results[0];
-
+        
         
         const weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m`);
 
@@ -40,7 +44,9 @@ weatherForm.addEventListener('submit', async (event) => {
 
         const weatherData = await weatherResponse.json();
         weatherResult.textContent = `In ${place.name} sind es aktuell ${weatherData.current.temperature_2m} °C.`;
-
+        
+        localStorage.setItem('lastCity', place.name);
+    
     } catch (error) {
         console.error('Fehler beim Abrufen der Wetterdaten:', error);
         weatherResult.textContent = 'Es gab einen Fehler beim Abrufen der Wetterdaten. Bitte versuche es später erneut.';
