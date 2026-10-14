@@ -34,9 +34,7 @@ weatherForm.addEventListener('submit', async (event) => {
         }
 
         const place = data.results[0];
-        
-        
-        const weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m`);
+        const weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m,apparent_temperature&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto`);
 
         if (!weatherResponse.ok) {
                 throw new Error(`HTTP error! status: ${weatherResponse.status}`);

@@ -13,7 +13,7 @@ In Arbeit:
 - [x] Fehlermeldungen (z. B. Stadt nicht gefunden)
 - [ ] Fuzzy Search 
 - [ ] Styling mit CSS
-- [ ] Letzte Suche im localStorage speichern
+- [x] Letzte Suche im localStorage speichern
 
 Future Feature:
 
