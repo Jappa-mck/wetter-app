@@ -1,11 +1,11 @@
 # Wetter-App
 
-Eine einfache Wetter-App, die zu einer eingegebenen Stadt die aktuelle Temperatur anzeigt.
+Eine einfache Wetter-App, die zu einer eingegebenen Stadt die aktuelle Temperatur anzeigt. 
 Das Projekt entsteht als Lernprojekt und wird laufend erweitert.
 
 ## Status
 
-🚧 In Arbeit
+In Arbeit:
 
 - [x] Stadt über die Geocoding-API finden
 - [x] Aktuelle Temperatur abrufen und anzeigen
@@ -14,6 +14,10 @@ Das Projekt entsteht als Lernprojekt und wird laufend erweitert.
 - [ ] Fuzzy Search 
 - [ ] Styling mit CSS
 - [ ] Letzte Suche im localStorage speichern
+
+Future Feature:
+
+Geplant ist die Integration einer KI, die den Nutzer:innen passend zum aktuellen Wetter persönliche Outfit-Empfehlungen gibt.
 
 ## Verwendete Technik
 
