@@ -1,1 +1,135 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;                          
+}
 
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 0 1rem;                                 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #f4fafb;
+    background-color: #0b0f19; 
+}
+
+main {
+  width: 100%;
+  max-width: 640px;
+}
+
+h1  {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;                                     
+    background-color: #1e293b;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.search-box:focus-within {
+    border-color: #f4fafb;
+}
+
+.weather-card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(10, 9, 9, 0.2);
+    margin-top: 20px;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.weather-item {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);     
+    border-radius: 10px;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.weather-label {
+    display: block;                                 
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.weather-value {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);                              
+}
+
+
+#city-input {
+    flex: 1;
+    min-width: 0;                                    
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: transparent;                   
+    color: #f4fafb;
+}
+
+#weather-form {                                      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#weather-form button {
+    display: flex;
+    background-color: #6366f1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 13px;
+}
+
+#weather-form button img {
+  filter: invert(1);
+}
+
+#weather-form label {
+    align-self: center;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+@media (max-width: 520px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+}
