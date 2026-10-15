@@ -9,7 +9,7 @@ In Arbeit:
 
 - [x] Stadt über die Geocoding-API finden
 - [x] Aktuelle Temperatur abrufen und anzeigen
-- [ ] Integration weiterer Wetterdaten (Gefühlte Temperatur, Min/Max, Regenwahrscheinlichkeit)
+- [x] Integration weiterer Wetterdaten (Gefühlte Temperatur, Min/Max, Regenwahrscheinlichkeit)
 - [x] Fehlermeldungen (z. B. Stadt nicht gefunden)
 - [ ] Fuzzy Search 
 - [ ] Styling mit CSS

@@ -24,39 +24,67 @@
 
       </form>
 
-      <div id="weather-result" aria-live="polite"></div>
-      <div id="weather-details" hidden>
+      <section class="weather-card"> 
 
-        <h2>
-          <span id="city-name"></span>
-          <span id="country-name"></span>
-        </h2>
+        <div id="weather-result" aria-live="polite"></div>
+        <div id="weather-details" hidden>
 
-        <div class="weather-item">
-          <span class="weather-label">Temperatur</span>
-          <span class="weather-value" id="temperature-value"></span>
+          <h2>
+            <span id="city-name"></span>
+            <span id="country-name"></span>
+          </h2>
+
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <span class="weather-label">Temperatur</span>
+
+              <div class="weather-main">
+                <img class="weather-icon" src="icons/sun.svg" alt="" width="40" height="40">
+                <span class="weather-value" id="temperature-value"></span>
+              </div>
+              
+            </div>
+
+
+            <div class="weather-item">
+              <span class="weather-label">Gefühlte Temperatur</span>
+              
+              <div class="weather-main">
+                <img class="weather-icon" src="icons/thermometer.svg" alt="" width="40" height="40">
+                <span class="weather-value" id="apparent-temperature-value"></span>
+              </div>
+              
+            </div>
+
+
+            <div class="weather-item">
+              <span class="weather-label">Höchst-/Tiefstwert</span>
+
+              <div class="weather-main">
+                <img class="weather-icon" src="icons/arrow-up-down.svg" alt="" width="40" height="40">
+                <span class="weather-value" id="temperature-range-value"></span>
+              </div>
+
+            </div>
+
+
+            <div class="weather-item">
+              <span class="weather-label">Regenwahrscheinlichkeit</span>
+
+              <div class="weather-main">
+                <img class="weather-icon" src="icons/cloud-rain.svg" alt="" width="40" height="40">
+                <span class="weather-value" id="precipitation-probability-value"></span>
+              </div>
+
+            </div>
+          
+          </div>
+
         </div>
 
+      </section>
 
-        <div class="weather-item">
-          <span class="weather-label">Gefühlte Temperatur</span>
-          <span class="weather-value" id="apparent-temperature-value"></span>
-        </div>
-
-
-        <div class="weather-item">
-          <span class="weather-label">Höchst-/Tiefstwert</span>
-          <span class="weather-value" id="temperature-range-value"></span>
-        </div>
-
-
-        <div class="weather-item">
-          <span class="weather-label">Regenwahrscheinlichkeit</span>
-          <span class="weather-value" id="precipitation-probability-value"></span>
-        </div> 
-
-      </div>
-      
     </main>
 
   </body>
