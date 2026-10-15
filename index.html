@@ -9,19 +9,55 @@
   <script src="script.js" defer></script>
 
 </head>
-<body>
+  <body>
 
-  <main>
+    <main>
 
-    <h1>Wetter App</h1>
-    <form id="weather-form">
-      <input type="text" id="city-input" placeholder="Stadt suchen" required>
-      <button type="submit">Wetter anzeigen</button>
-    </form>
-    <div id="weather-result" aria-live="polite"></div>
+      <h1>Wetter App</h1>
 
-  </main>
+      <form id="weather-form">
 
-  
-</body>
+        <label for="city-input">Stadt suchen: </label>
+
+        <input type="text" id="city-input" placeholder="z. B. Berlin" required>
+        <button type="submit">Wetter anzeigen</button>
+
+      </form>
+
+      <div id="weather-result" aria-live="polite"></div>
+      <div id="weather-details" hidden>
+
+        <h2>
+          <span id="city-name"></span>
+          <span id="country-name"></span>
+        </h2>
+
+        <div class="weather-item">
+          <span class="weather-label">Temperatur</span>
+          <span class="weather-value" id="temperature-value"></span>
+        </div>
+
+
+        <div class="weather-item">
+          <span class="weather-label">Gefühlte Temperatur</span>
+          <span class="weather-value" id="apparent-temperature-value"></span>
+        </div>
+
+
+        <div class="weather-item">
+          <span class="weather-label">Höchst-/Tiefstwert</span>
+          <span class="weather-value" id="temperature-range-value"></span>
+        </div>
+
+
+        <div class="weather-item">
+          <span class="weather-label">Regenwahrscheinlichkeit</span>
+          <span class="weather-value" id="precipitation-probability-value"></span>
+        </div> 
+
+      </div>
+      
+    </main>
+
+  </body>
 </html>
